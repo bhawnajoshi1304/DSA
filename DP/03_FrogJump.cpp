@@ -1,4 +1,5 @@
 // https://www.codingninjas.com/studio/problems/frog-jump_3621012
+// frog can jump 1 or 2 stairs, each jump has energy consumption of abs(abs(heights[i] - heights[j])
 #include <bits/stdc++.h>
 using namespace std;
 long main()
@@ -10,7 +11,7 @@ long main()
     cout << "Enter heights of stairs: ";
     for (long i = 0; i < n; i += 1)
         cin >> stair[i];
-    cout << "Min energy to reach n th stair: " << frogJump(n, stair, dp) << "\n";
+    cout << "Min energy to reach "<<n<<" th stair: " << frogJump(n, stair, dp) << "\n";
     return 0;
 }
 long frogJump(long n, vector<long> &heights, vector<long> &dp)

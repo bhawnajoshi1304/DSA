@@ -1,4 +1,5 @@
 // https://www.codingninjas.com/studio/problems/minimal-cost_8180930
+// Modification: allowed jumps from 1 and 2 to 1,2,3...k?
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -15,7 +16,6 @@ long frogJump(long n, long k, vector<long> &heights, vector<long> &dp)
     }
     return dp[n - 1];
 }
-// Modification: allowed jumps from 1 and 2 to 1,2,3...k?
 // Time complexity: O(nk)
 // Space complexity: O(n)
 // Space optimized: O(k)

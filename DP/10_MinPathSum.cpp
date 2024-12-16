@@ -1,4 +1,5 @@
 // https://www.codingninjas.com/studio/problems/minimum-path-sum_985349
+// https://leetcode.com/problems/minimum-path-sum/description/
 
 #include <bits/stdc++.h>
 using namespace std;

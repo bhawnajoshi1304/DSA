@@ -8,7 +8,7 @@ using namespace std;
         long long x=1,y=min(m,n),z=max(m,n);
         for(int i=z;i<z+y-1;i++)
             x*=i;
-        
+        // (m+n-1)! / m!n!
         for(int i=2;i<y;i++)
             x/=i;
         return x;

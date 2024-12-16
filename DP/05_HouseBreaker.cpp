@@ -1,4 +1,5 @@
 // https://www.codingninjas.com/studio/problems/maximum-sum-of-non-adjacent-elements_843261
+// https://leetcode.com/problems/house-robber/description/
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -22,6 +23,31 @@ long houseBreaker(long n, vector<long> &arr)
     }
     return curr;
 }
+
+int rob(vector<int>& nums) {
+    if(nums.size() == 1) return nums[0];
+    vector<int> dp(nums.size());
+    dp[0] = nums[0];
+    dp[1] = max(nums[0],nums[1]);
+    for(int i=2;i<nums.size();i+=1){
+        dp[i]=max(nums[i]+dp[i-2],dp[i-1]);
+    }
+    return dp[nums.size()-1];
+}
+
+int rob(vector<int>& nums) {
+    if(nums.size() == 1) return nums[0];
+        int prev2 = nums[0];
+        int prev1 = max(nums[0],nums[1]);
+        int curr = prev1;
+        for(int i=2;i<nums.size();i+=1){
+            curr = max(nums[i]+prev2,prev1);
+            prev2 = prev1;
+            prev1 = curr;
+        }
+        return curr;
+}
+
 // Time complexity: O(n)
 // Space complexity: O(n)
 // Space optimized: O(1)

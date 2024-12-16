@@ -1,4 +1,5 @@
 // https://www.codingninjas.com/studio/problems/triangle_1229398
+// https://leetcode.com/problems/triangle/description/
 #include <bits/stdc++.h> 
 using namespace std;
 // // DP solution

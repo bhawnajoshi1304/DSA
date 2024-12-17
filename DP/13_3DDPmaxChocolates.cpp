@@ -83,3 +83,17 @@ int solve(int n, int m, vector<vector<int>> &grid) {
     }
     return prev[0][m-1];
 }
+  
+int main()
+{
+    long n,m;
+    cout << "Enter grid size: ";
+    cin >> m >> n;
+    vector<vector<int>> mat(m,vector<int>(n,0));
+    cout<<"Enter grid values:\n";
+    for(int i=0;i<m;i+=1)
+        for(int j=0;j<n;j+=1)
+            cin>>mat[i][j];
+    cout << "Min sum to reach grid[n-1] from grid[0] going down or diagonally left/right: " << solve(m,n,mat) << "\n";
+    return 0;
+}

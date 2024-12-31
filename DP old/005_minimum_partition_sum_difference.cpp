@@ -38,7 +38,7 @@ bool MinimumPartitionSumDifference(vector<int> arr, int n)
     //         cout << dp[i][j] << " ";
     //     cout << "\n";
     // }
-    for(int j=target;j>=0;j++)
+    for(int j=target;j>=0;j--)
         if(dp[n][j])
             return sum - 2*j;
 }
@@ -59,7 +59,7 @@ bool MinimumPartitionSumDifferenceOptimized(vector<int> arr, int n) {
     }
     // for (int i = 0; i <= target; i += 1)
     //     cout << dp[i] << " ";
-    for(int j=target;j>=0;j++)
+    for(int j=target;j>=0;j--)
         if(dp[j])
             return sum - 2*j;
 }
@@ -75,7 +75,7 @@ int main() {
     for (int i = 0; i < n; i += 1) {
         cin >> arr[i];
     }
-    // cout << "MinimumPartitionSumDifference " << " possible: " << MinimumPartitionSumDifference(arr, n) << "\n";
+    cout << "MinimumPartitionSumDifference " << " possible: " << MinimumPartitionSumDifference(arr, n) << "\n";
     cout << "MinimumPartitionSumDifference " << " possible: " << MinimumPartitionSumDifferenceOptimized(arr, n) << "\n";
     return 0;
 }

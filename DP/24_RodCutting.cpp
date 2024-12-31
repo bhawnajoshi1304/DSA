@@ -1,59 +1,41 @@
-//{ Driver Code Starts
-// Initial Template for C++
-
+// https://www.geeksforgeeks.org/problems/rod-cutting0840/1
+// Given a rod of length n(size of price) inches and an array of prices, price. price[i] denotes the value of a piece of length i. Determine the maximum value obtainable by cutting up the rod and selling the pieces.
 #include <bits/stdc++.h>
 using namespace std;
-
-
-// } Driver Code Ends
-// User function Template for C++
-// https://www.geeksforgeeks.org/problems/rod-cutting0840/1
-class Solution {
-  public:
-    int cutRod(vector<int> &price) {
-        int n=price.size();
-        // vector<vector<int>> dp(n+1,vector<int>(n+1));
-        // for(int i=1;i<=n;i+=1){
-        //     for(int j=1;j<=n;j+=1){
-        //         if(j>=i)
-        //         dp[i][j]=max(dp[i-1][j],dp[i][j-i]+price[i-1]);
-        //         else
-        //         dp[i][j]=dp[i-1][j];
-        //     }
-        // }
-        // return dp[n][n];
-        vector<int> dp(n+1);
-        for(int i=1;i<=n;i+=1){
-            for(int j=1;j<=n;j+=1){
-                if(j>=i)
-                dp[j]=max(dp[j],dp[j-i]+price[i-1]);
-            }
+long long cutRod(vector<long long> &price)
+{
+    long long n = price.size();
+    // vector<vector<long long>> dp(n + 1, vector<long long>(n + 1));
+    // for (long long i = 1; i <= n; i += 1)
+    // {
+    //     for (long long j = 1; j <= n; j += 1)
+    //     {
+    //         if (j >= i)
+    //             dp[i][j] = max(dp[i - 1][j], dp[i][j - i] + price[i - 1]);
+    //         else
+    //             dp[i][j] = dp[i - 1][j];
+    //     }
+    // }
+    // return dp[n][n];
+    vector<long long> dp(n + 1);
+    for (long long i = 1; i <= n; i += 1)
+    {
+        for (long long j = 1; j <= n; j += 1)
+        {
+            if (j >= i)
+                dp[j] = max(dp[j], dp[j - i] + price[i - 1]);
         }
-        return dp[n];
     }
-};
-
-//{ Driver Code Starts.
-
+    return dp[n];
+}
 int main() {
-    int t;
-    scanf("%d ", &t);
-    while (t--) {
-
-        vector<int> a;
-        string input;
-        getline(cin, input);
-        stringstream ss(input);
-        int number;
-        while (ss >> number) {
-            a.push_back(number);
-        }
-
-        Solution ob;
-
-        cout << ob.cutRod(a) << endl;
-        cout << "~" << endl;
-    }
+    long long capacity, n;
+    cout << "Enter rod length: ";
+    cin >> n;
+    vector<long long> price(n);
+    cout << "Enter the price of rod length i+1 seperated by space: ";
+    for (long long i = 0; i < n; i++)
+        cin >> price[i];
+    cout << "Knapsack total value: " << cutRod(price) << "\n";
     return 0;
 }
-// } Driver Code Ends

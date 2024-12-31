@@ -1,3 +1,4 @@
+// https://www.geeksforgeeks.org/problems/subset-sum-problem-1611555638/1
 #include <bits/stdc++.h>
 using namespace std;
 // Assuming a array of 4 elememts and given a sum 7 
@@ -24,11 +25,6 @@ bool SubsetSum(vector<int> arr, int n, int target)
                 dp[i][j] = dp[i - 1][j];
         }
     }
-    // for (int i = 0; i <= n; i += 1) {
-    //     for (int j = 0; j <= target; j += 1)
-    //         cout << dp[i][j] << " ";
-    //     cout << "\n";
-    // }
     return dp[n][target];
 }
 // Time Complexity: O(W*N)
@@ -42,8 +38,6 @@ bool SubsetSumOptimized(vector<int> arr, int n, int target) {
             dp[j] = dp[j] || dp[j - num];
         }
     }
-    // for (int i = 0; i <= target; i += 1)
-    //     cout << dp[i] << " ";
     return dp[target];
 }
 // Time Complexity: O(W*N)

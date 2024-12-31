@@ -25,14 +25,13 @@ bool subsetSum(vector<long long> arr, long long sum, long long n)
     // We initialize the DP mtrix with false and 1st column with value true and others need to be computed.
     // 1st column indicates sum=0 i.e. always true as empty subarray has sum 0.
     vector<vector<bool>> t(n + 1, vector<bool>(sum + 1, false));
-    // Initializing sum=0 i.e. first column as true.
-    for (long long i = 0; i <= n; i++)
-    {
-        t[i][0] = true;
-    }
+    // Initializing sum=0
+    t[0][0] = true;
     // Computing the max value of other sum.
     for (long long i = 1; i <= n; i++)
     {
+    // Initializing sum=0 i.e. first column as true.
+        t[i][0] = true;
         for (long long j = 1; j <= sum; j++)
         {
             // t[i][j] stores considering first i items if sum j is possible.

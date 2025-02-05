@@ -1,5 +1,7 @@
 // Top View Of Tree
-// Order from left to right, element heighest in vertical order are only included.
+// Order from left to right, element heighest in vertical order are only included. - Level order with x co-ordinate pick 1st ones only
+
+// -3-2-1      0    1    2
 //            10
 //        /        \
 //      5           15

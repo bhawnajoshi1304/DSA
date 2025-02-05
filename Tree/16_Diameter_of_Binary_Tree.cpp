@@ -1,12 +1,12 @@
 // Diameter: Longest path between two nodes. Path does not need to pass via root. It is sum of height of the left subtree and height of right subtree.
 
-//           10
+//           10               4 (3+3)=6 
 //       /        \
-//      5           15
+//      5           15        3
 //    /   \       /    \
-//   2     6    13      22
+//   2     6    13      22    2
 //  /          /  \
-// 1          12   14
+// 1          12   14         1
 // Diameter of the given Binary Tree is: 6
 
 // Time Complexity: O(n)

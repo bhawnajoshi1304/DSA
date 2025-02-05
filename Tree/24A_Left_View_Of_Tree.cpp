@@ -1,12 +1,12 @@
 // Left View Of Tree
-// Left view of a Binary Tree is set of nodes visible when tree is visited from Left side.
-//            10
+// Left view of a Binary Tree is set of nodes visible when tree is visited from Left side. - Preorder traversal with y co-ordinate
+//            10             0
 //        /        \
-//      5           15
+//      5           15       1
 //    /   \       /    \
-//   2     6    13      22
+//   2     6    13      22   2
 //             /  \
-//            12   14
+//            12   14        3
 
 // Left View Of Tree: 10 5 2 12
 

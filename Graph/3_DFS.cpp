@@ -1,5 +1,19 @@
 // DFS: Depth First Search 
 // It uses stack(LIFO) and nodes along the depth are visited first.
+
+// Enter number of nodes and edges in graph: 5 3
+// Enter the edges described as source and destination nodes seperated by space:
+// 1 3
+// 2 4
+// 4 3
+// Adjacency list representation of graph:
+// 1->3 
+// 2->4 
+// 3->1 4 
+// 4->2 3 
+// 5->
+// DFS of graph is: 1 3 4 2 5 
+// https://www.geeksforgeeks.org/problems/depth-first-traversal-for-a-graph/1
 #include<bits/stdc++.h>
 using namespace std;
 vector<vector<long long>> Graph(long long n,long long m){

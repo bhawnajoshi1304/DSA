@@ -2,11 +2,9 @@
 
 //            8
 //        /        \
-//      5           12
-//    /   \       /    \
-//   4     7    11      14
-//        /            /
-//      6            13
+//      5           10
+//    /   \            \
+//   1     7            12
 
 // Three methods to generate BST from preorder traversal:
 // 1. n inserts in Binary Tree. Time Complexity: O(n^2)

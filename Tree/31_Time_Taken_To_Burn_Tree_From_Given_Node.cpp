@@ -1,5 +1,7 @@
 // Time taken to burn a tree from a node
 // We burn a tree by burning adjacent nodes at a level one by one
+// Max distance from node is the time taken
+// Make parent mapping and then bfs from taget node travelling left, right and parent.
 //            10
 //        /        \
 //      5           15

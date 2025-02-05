@@ -1,4 +1,18 @@
 // Adjacency matrix representation maps nodes to vector of adjacent nodes.
+// Enter number of nodes and edges in graph: 5 3
+// Enter the edges described as source and destination nodes seperated by space:
+// 1 3
+// 2 4
+// 4 3
+// Adjacency list representation of graph:
+// 1->3 
+// 2->4 
+// 3->1 4 
+// 4->2 3 
+// 5->
+
+// https://www.geeksforgeeks.org/problems/print-adjacency-list-1587115620/1
+
 #include<bits/stdc++.h>
 using namespace std;
 vector<vector<long long>> Graph(long long n,long long m){

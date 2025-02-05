@@ -16,6 +16,13 @@
 // left right root
 // Post-Order Traversal: 2 6 5 12 14 13 22 15 10
 
+// from a root I can go to left then right but can't return so when I want to go to root again, last traversal of left needs to point to root  
+// go to left then rightmost attach the right link to root
+// 6->10
+// 2->5
+// 14->15
+// 12->13 
+
 // Time Complexity: O(n)
 // Space Complexity: O(n) | O(1)
 #include <bits/stdc++.h>
@@ -43,6 +50,7 @@ vector<int> inorderTraversal(node *root) {
             while (prev->right != NULL && prev->right != curr)
                 prev = prev->right;
             if (prev->right == NULL) {
+                // cout<<prev->data<<"->"<<curr->data<<"\n";
                 prev->right = curr;
                 curr = curr->left;
             }
@@ -71,7 +79,7 @@ vector<int> preorderTraversal(node *root) {
                 prev = prev->right;
             if (prev->right == NULL) {
                 prev->right = curr;
-                // cout << curr->data << " ";
+                // cout << prev->data<<"->"<<curr->data << "\n";
                 preorder.push_back(curr->data);
                 curr = curr->left;
             }

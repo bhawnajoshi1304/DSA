@@ -1,17 +1,17 @@
 // Maximum Width of Tree
-// It is the number of imaginary and real nodes between any two nodes of tree in same level
-//            10
-//        /        \
-//      5           15
-//    /   \       /    \
-//   2     6    13      22
+// It is the number of imaginary and real nodes between any two (real)nodes of tree in same level
+//            10(0)
+//        /           \
+//      5(1)           15(2)
+//    /     \          /    \
+//   2(3)     6(4)  13(5)      22(6)
 //             /  \
-//            12   14
+//         12(9)   14(10)
 // Maximum Width of Tree is: 4
 
 // Explanation: between 2 and 22 4 nodes are present.
-//              If 2 had a left child then ans would be 6
-
+//        If 2 had a left child and 13 a right child then ans would be 6
+// Indexes assigned with level order
 // Time Complexity: O(n)
 // Space Complexity: O(n) | O(log n)
 #include <bits/stdc++.h>

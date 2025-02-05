@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
+// https://www.geeksforgeeks.org/problems/bipartite-graph/1
 vector<vector<long long>> Graph(long long n,long long m){
     vector<vector<long long>> adj(n+1);
     for(long long i=0;i<m;i++){

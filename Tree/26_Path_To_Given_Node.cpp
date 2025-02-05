@@ -12,8 +12,7 @@
 // Space Complexity: O(n) | O(log n)
 #include <bits/stdc++.h>
 using namespace std;
-struct node
-{
+struct node {
     long long data;
     struct node *left;
     struct node *right;
@@ -24,31 +23,33 @@ struct node
     }
 };
 
-void search(node* root,int val,vector<long long> &path,bool &flag){
-    if(root==NULL || flag) return;
-    path.push_back(root->data);
-    if(root->data==val){
-        flag=true;
+void search(node *root, int val, vector<long long> &path, bool &flag) {
+    if (root == NULL || flag)
         return;
-    } 
-    search(root->left,val,path,flag);
-    if(flag) return;
-    search(root->right,val,path,flag);
-    if(flag) return;
+    path.push_back(root->data);
+    if (root->data == val) {
+        flag = true;
+        return;
+    }
+    search(root->left, val, path, flag);
+    if (flag)
+        return;
+    search(root->right, val, path, flag);
+    if (flag)
+        return;
     path.pop_back();
 }
 
-void PathToVal(node* root,long long val){
-    bool flag=false;
+void PathToVal(node *root, long long val) {
+    bool flag = false;
     vector<long long> path;
-    search(root,val,path,flag);
-    for(auto i:path){
-        cout<<i<<" ";
+    search(root, val, path, flag);
+    for (auto i : path) {
+        cout << i << " ";
     }
 }
 
-int main()
-{
+int main() {
     struct node *root = new node(10);
     root->left = new node(5);
     root->left->left = new node(2);
@@ -58,9 +59,9 @@ int main()
     root->right->left->left = new node(12);
     root->right->left->right = new node(14);
     root->right->right = new node(22);
-    int val=13;
-    cout<<"Path to "<<val<<" is: ";
-    PathToVal(root,val);
-    cout<<"\n";
+    int val = 13;
+    cout << "Path to " << val << " is: ";
+    PathToVal(root, val);
+    cout << "\n";
     return 0;
 }

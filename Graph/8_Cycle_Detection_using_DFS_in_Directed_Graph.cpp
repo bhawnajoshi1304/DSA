@@ -1,5 +1,10 @@
 #include<bits/stdc++.h>
 using namespace std;
+// visited[]	Marks if a node is completely visited	Prevents revisiting fully processed nodes
+// visitedDFS[]	Tracks nodes in the current DFS path	Detects back edges and cycles
+// 1 → 2 → 3 → 4 → 2
+// When node 4 points back to 2, the algorithm checks visitedDFS[2] and sees that 2 is still in the current DFS path.
+// https://www.geeksforgeeks.org/problems/detect-cycle-in-a-directed-graph/1
 vector<vector<long long>> directedGraph(long long n,long long m){
     vector<vector<long long>> adj(n+1);
     for(long long i=0;i<m;i++){
@@ -33,7 +38,7 @@ bool DFS(long long node,vector<vector<long long>> &g, vector<bool> &visited,  ve
             return true;
         }
     }
-    visitedDFS[node] = false;
+    visitedDFS[node] = false; // de mark after node
     return false;
 }
 

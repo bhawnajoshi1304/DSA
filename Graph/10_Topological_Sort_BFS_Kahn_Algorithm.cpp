@@ -9,7 +9,7 @@
 // Topological ordering exists only for DAG(Directed Acyclic Graph) as for a unordered or a graph with cycle, no ordering is possible
 
 // Using BFS or the Kahn's Algorithm
-// nodes in increasing order of indegree can give hint of ordering, to arrange properly we make use of BFS
+// nodes in increasing order of indegree can give hint of ordering, to arrange properly we make use of BFS, push into stack elements with 0 indegree and while removing elements from stack reduce indegree of neighbouring nodes
 #include <bits/stdc++.h>
 using namespace std;
 vector<vector<long long>> directedGraph(long long n, long long m)

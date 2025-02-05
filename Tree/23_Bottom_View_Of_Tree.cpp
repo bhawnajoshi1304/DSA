@@ -1,6 +1,7 @@
 // Bottom View Of Tree
 // Order from left to right, element lowest in vertical order are only included.
 // Right elements are prioritized over left if they have same vertical and horizontal priority.
+// -3-2-1      0     1   2
 //            10
 //        /        \
 //      5           15

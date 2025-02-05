@@ -1,4 +1,7 @@
 // Bipartite graph is a graph that can be divided into two partitions such that no nodes in same partition are connected 
+// Try bfs and assign color while travelling, if colored check if matching else assign opposite to current
+// Check for odd size cycles
+// https://www.geeksforgeeks.org/problems/bipartite-graph/1
 #include<bits/stdc++.h>
 using namespace std;
 vector<vector<long long>> Graph(long long n,long long m){

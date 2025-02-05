@@ -9,6 +9,7 @@
 //            12   14
 
 // The nodes at distance 3 from given node 5 is: 13 22 
+// Traverse to find parent mappings, then do bfs from required node travelling to left, right and parent
 // Time Complexity: O(n)
 // Space Complexity: O(n) | O(log n)
 #include <bits/stdc++.h>

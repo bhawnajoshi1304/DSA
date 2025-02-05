@@ -1,12 +1,12 @@
 // Right View Of Tree
-// Right view of a Binary Tree is set of nodes visible when tree is visited from Right side.
-//            10
+// Right view of a Binary Tree is set of nodes visible when tree is visited from Right side. root than traversal to right then left
+//            10            0
 //        /        \
-//      5           15
+//      5           15      1
 //    /   \       /    \
-//   2     6    13      22
+//   2     6    13      22  2
 //             /  \
-//            12   14
+//            12   14       3
 
 // Right View Of Tree: 10 15 22 14
 

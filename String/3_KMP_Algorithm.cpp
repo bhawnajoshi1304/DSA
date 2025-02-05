@@ -17,43 +17,35 @@
 // To calculate it efficiently we notice that prefix function can only increase by 1 with previous index.
 #include <bits/stdc++.h>
 using namespace std;
-void lps(vector<long long> &p, string s)
-{
-    for (long long i = 1; i < s.size(); i += 1)
-    {
+void lps(vector<long long> &p, string s) {
+    for (long long i = 1; i < s.size(); i += 1) {
         if (s[i] == s[p[i - 1]])
             p[i] = p[i - 1] + 1;
     }
 }
-long long KMPAlgorithm(string s1, string s2)
-{
+long long KMPAlgorithm(string s1, string s2) {
     long long ans = 0;
     vector<long long> p(s1.size(), 0);
     lps(p, s1);
     long long j = 0;
-    for (long long i = 0; i < s2.size(); i += 1)
-    {
+    for (long long i = 0; i < s2.size(); i += 1) {
         if (s2[i] == s1[j])
             j += 1;
-        else if (j > 0)
-        {
+        else if (j > 0) {
             j = p[j - 1];
             i -= 1;
         }
-        if (j == s1.size())
-        {
+        if (j == s1.size()) {
             ans += 1;
             j = p[j - 1];
         }
     }
     return ans;
 }
-void solve(string s1, string s2)
-{
+void solve(string s1, string s2) {
     cout << "The frequency of " << s1 << " in " << s2 << " : " << KMPAlgorithm(s1, s2) << "\n";
 }
-int main()
-{
+int main() {
     char choice = 'y';
     solve("abc", "abcbcabc");
     cout << "Test more inputs? (y/n): ";

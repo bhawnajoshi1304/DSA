@@ -30,7 +30,6 @@ struct node {
         this->left = this->right = NULL;
     }
 };
-node *first, *tmp, *middle, *last;
 void traversal(node *root) {
     stack<pair<node *, int>> s;
     s.push({root, 1});
@@ -73,6 +72,8 @@ void traversal(node *root) {
         cout << i << " ";
     cout << "\n";
 }
+
+node *first, *tmp, *middle, *last;
 void inorderCheck(node* root) {
     if (root == NULL)
         return;
@@ -108,16 +109,20 @@ int main() {
     root->right->right->left = new node(20);
     // swap 8 7
     swap(root->data, root->left->right->data);
+    cout<<"Before recover:\n";
     traversal(root);
     cout << "\n";
     recoverTree(root);
+    cout<<"After recover:\n";
     traversal(root);
     cout << "\n";
     // swap 5 25
     swap(root->left->data, root->right->right->data);
+    cout<<"Before recover:\n";
     traversal(root);
     cout << "\n";
     recoverTree(root);
+    cout<<"After recover:\n";
     traversal(root);
     cout << "\n";
     return 0;

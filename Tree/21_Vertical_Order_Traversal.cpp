@@ -1,14 +1,15 @@
 // Vertical traversal
 // Order from top to bottom and left to right.
-// If multiple elements at same level both horizontally and vertically, take smaller element first.
+// If multiple elements at same level both horizontally and vertically, take in order of level order first. - use level order and track with map the x and y co-ordinates
 // Create map for each row column 
-//            10
-//        /        \
-//      5           15
-//    /   \       /    \
-//   2     6    13      22
-//  /          /  \
-// 1          12   14
+// -3-2-1      0     1   2
+//           10             0
+//        /      \
+//      5         15        1 
+//    /   \     /    \
+//   2     6  13      22    2
+//  /       /   \
+// 1     12      14         3
 
 // Vertical order Traversal: 1 2 5 12 10 6 13 15 14 22
 

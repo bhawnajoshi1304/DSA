@@ -72,8 +72,8 @@ void traversal(node *root) {
 node *buildTree(vector<int> &preorder, int preStart, int preEnd, vector<int> &inorder, int inStart, int inEnd, map<int, int> &imap) {
     if (preStart > preEnd || inStart > inEnd)
         return NULL;
-    int inRoot = imap[preorder[preStart]];
-    int numsLeft = inRoot - inStart;
+    int inRoot = imap[preorder[preStart]]; // preorder starts with root
+    int numsLeft = inRoot - inStart; // number of nodes in left subtree
     node *root = new node(preorder[preStart]);
     root->left = buildTree(preorder, preStart + 1, preStart + numsLeft, inorder, inStart, inRoot - 1, imap);
     root->right = buildTree(preorder, preStart + numsLeft + 1, preEnd, inorder, inRoot + 1, inEnd, imap);

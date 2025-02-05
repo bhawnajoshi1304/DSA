@@ -33,7 +33,7 @@ void postOrder(node *root)
         return;
     // Implemented using one stacks
     // Since we need first left tree then right and then root.
-    // So at first we push root and then its left elements while popping out elemwnts we travel right and then push its left and so on...
+    // So at first we push root and then its left elements while popping out elements we travel right and then push its left and so on...
     stack<node*> s;
     node *temp = NULL;
     while (root != NULL || !s.empty())

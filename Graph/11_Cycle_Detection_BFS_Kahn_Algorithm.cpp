@@ -2,7 +2,7 @@
 using namespace std;
 
 // We make use of Kahn's algorithm used for finding Topological ordering of graph to check if there is a cycle in a graph.
-// Topological ordering occurs for DAG only, so if no ordering is possible then graph has a cycle.
+// Topological ordering occurs for DAG only, so if no ordering is possible then graph has a cycle. No ordering ie the generated topological sort does not have n elements
 vector<vector<long long>> directedGraph(long long n, long long m)
 {
     vector<vector<long long>> adj(n + 1);

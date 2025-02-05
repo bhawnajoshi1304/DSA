@@ -41,6 +41,10 @@ long long ZAlgorithm(string s, long long n)
                 ans += 1;
         }
     }
+    for(auto i:z){
+        cout<<i<<" ";
+    }
+    cout<<"\n";
     return ans;
 }
 void solve(string s1, string s2)

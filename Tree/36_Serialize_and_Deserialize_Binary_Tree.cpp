@@ -1,4 +1,4 @@
-// Complete Binary tree is as filled as possible in the left
+// Serialization of tree is the level order traversal of the tree with empty nodes marked as #
 //            10
 //        /        \
 //      5           15
@@ -6,8 +6,21 @@
 //   2     6    13      22
 //  / \
 // 12  14
+// "10,5,15,2,6,13,22,12,14,#,#,#,#,#,#,#,#,#,#,"
 
-// Count of nodes in complete binary tree is: 9
+// Deserialize refers to constructing tree from level order traversal
+// 1,2,13,#,#,4,5,#,#,#,#,
+//            1
+//        /        \
+//      2           13
+//                /    \
+//               4       5
+
+    // cin>>data; or getline(data);->take input from stdin and copy it in variable data
+    // stringstream s(data);-> convert string to string stream
+    // string str;
+    // getline(s, str, ',');->get data from s to variable str till ','
+    
 // Time Complexity: O(n)
 // Space Complexity: O(n) | O(log n)
 #include <bits/stdc++.h>

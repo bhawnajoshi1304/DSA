@@ -1,7 +1,4 @@
-// Morris Traversal
-// It uses threaded binary tree to reduce space complexity in tree traversals.
-// Before travelling to left, the right most node of left subtree is made to point to the current node.
-// Then left tree is traversed, on reaching the current node it travels to left and finds the threaded link which is broken and tree is traversed to right.
+// Flattening a binary tree means to convert it to linked list with right as the next node
 //            10
 //        /        \
 //      5           15
@@ -15,6 +12,11 @@
 // In-Order Traversal:   2 5 6 10 12 13 14 15 22
 // left right root
 // Post-Order Traversal: 2 6 5 12 14 13 22 15 10
+
+
+// Flattened tree: 10 5 2 6 15 13 12 14 22 
+// last element of left subtree points to right element
+// root right node becomes left node
 
 // Time Complexity: O(n)
 // Space Complexity: O(n) | O(1)

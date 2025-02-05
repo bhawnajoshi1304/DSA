@@ -1,4 +1,5 @@
 // Using dfs we can check for a cycle by checking if a node is already visited and is not the parent of the node.
+// https://www.geeksforgeeks.org/problems/detect-cycle-in-an-undirected-graph/1
 #include<bits/stdc++.h>
 using namespace std;
 vector<vector<long long>> Graph(long long n,long long m){
@@ -23,7 +24,6 @@ void printGraph(vector<vector<long long>> &G){
 }
 
 bool hasCycle(vector<vector<long long>> &g){
-    vector<long long> dfs;
     vector<bool> visited(g.size(),false);
     for(int i=1;i<g.size();i++){
         if(!visited[i]){
@@ -48,6 +48,27 @@ bool hasCycle(vector<vector<long long>> &g){
     return false;
 }
 
+// bool DFS(int i,vector<vector<int>>& adj, vector<bool> &visited,int parent){
+//     visited[i]=true;
+//     for(auto x:adj[i]){
+//         if(!visited[x]){
+//             if(DFS(x,adj,visited,i)) return true;
+//         }else{
+//             if(x!=parent) return true;
+//         }
+//     }
+//     return false;
+// }
+// bool isCycle(vector<vector<int>>& adj) {
+//     int n=adj.size();
+//     vector<bool> visited(n,false);
+//     for(int i=0;i<n;i+=1){
+//         if(!visited[i]){
+//             if(DFS(i,adj,visited,-1)) return true;
+//         }
+//     }
+//     return false;
+// }
 void print(vector<long long> v){
     for(long long i=0;i<v.size();i++){
         cout<<v[i]<<" ";

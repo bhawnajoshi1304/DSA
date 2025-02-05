@@ -13,29 +13,29 @@
 // Space Complexity: O(n) | O(log n)
 #include <bits/stdc++.h>
 using namespace std;
-struct node
-{
+struct node {
     long long data;
     struct node *left;
     struct node *right;
-    node(long long data)
-    {
+    node(long long data) {
         this->data = data;
         this->left = this->right = NULL;
     }
 };
 
-node* LeastCommonAncestor(node *root,int p,int q){
-    if(root==NULL || root->data==p || root->data==q) return root;
-    node* left=LeastCommonAncestor(root->left,p,q);
-    node* right=LeastCommonAncestor(root->right,p,q);
-    if(left==NULL) return right;
-    if(right==NULL) return left;
-    return root;   
+node *LeastCommonAncestor(node *root, int p, int q) {
+    if (root == NULL || root->data == p || root->data == q)
+        return root;
+    node *left = LeastCommonAncestor(root->left, p, q);
+    node *right = LeastCommonAncestor(root->right, p, q);
+    if (left == NULL)
+        return right;
+    if (right == NULL)
+        return left;
+    return root;
 }
 
-int main()
-{
+int main() {
     struct node *root = new node(10);
     root->left = new node(5);
     root->left->left = new node(2);
@@ -45,7 +45,7 @@ int main()
     root->right->left->left = new node(12);
     root->right->left->right = new node(14);
     root->right->right = new node(22);
-    int p=12,q=22;
-    cout<<"Least Common Ancestor of "<<p<<" and "<<q<<" is: "<<LeastCommonAncestor(root,p,q)->data<<"\n";
+    int p = 12, q = 22;
+    cout << "Least Common Ancestor of " << p << " and " << q << " is: " << LeastCommonAncestor(root, p, q)->data << "\n";
     return 0;
 }

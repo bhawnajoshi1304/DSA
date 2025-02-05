@@ -7,6 +7,8 @@
 //   4     7    11      14
 //        /            /
 //      6            13
+// Predecessor of 7: 6
+// Successor of 7: 8
 // Finding successor/predecessor in inorder traversal:
 // 1. Store inorder and O(n) to search in it.
 // 2. find element while finding inorder. Time Compleity: O(n) 
